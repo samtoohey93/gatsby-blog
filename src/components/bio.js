@@ -20,6 +20,7 @@ const Bio = () => {
           }
           social {
             twitter
+            linkedin
           }
         }
       }
@@ -36,20 +37,43 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/profile.jpeg"
         width={50}
         height={50}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
+        <>
+          <section className="links">
+            <p>
+              I'm a Front-End developer with a focus on React and a penchant for
+              User Experience. I've been in a constant state of learning for the
+              past 5 years - and I have a few projects under my belt. And yes,
+              this is <i>simple</i> because I just want something basic and fast
+              - the blog is intended to be styled in the same vein as marco.org
+            </p>
+            <p>
+              Blog by <strong>{author.name}</strong> <br></br>
+              Who {author?.summary || null}
+              <br></br>
+              {` `}
+              Things you can do: <br></br>
+              <a href={`https://twitter.com/${social?.twitter || ``}`}>
+                Follow me on Twitter
+              </a>
+              <a href={`https://techhub.social/@${social?.twitter || ``}`}>
+                <br></br> Follow on Mastodon
+              </a>
+              <a href={social?.linkedin || ``}>
+                <br></br> Check out my LinkedIn
+              </a>
+              <a href={social?.agency || ``}>
+                <br></br> Hire my Agency
+              </a>
+            </p>{" "}
+          </section>
+        </>
       )}
     </div>
   )

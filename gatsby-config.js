@@ -9,15 +9,17 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Sam Toohey`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Sam Toohey`,
+      summary: `lives in Riverstone, New South Wales and Works Remote.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Quick and Easy Blog and Portfolio`,
+    siteUrl: `https://samtoohey.xyz`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `iamsam2e`,
+      linkedin: `https://www.linkedin.com/in/sam-toohey-6a444267/`,
+      agency: `https://middleshelfstudios.au/`,
     },
   },
   plugins: [
@@ -114,9 +116,7 @@ module.exports = {
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
